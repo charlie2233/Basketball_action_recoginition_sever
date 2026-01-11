@@ -4,6 +4,7 @@ from __future__ import division
 import numpy as np
 import copy
 import time
+import argparse
 from tqdm import tqdm
 from easydict import EasyDict
 from vidaug import augmentors as vidaug
@@ -14,7 +15,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torchvision
 from torchvision import models
-from torch.utils.data import DataLoader, random_split
+from torch.utils.data import DataLoader, random_split, Subset
 
 from dataset import BasketballDataset
 from utils.checkpoints import init_session_history, save_weights, load_weights, write_history, read_history, plot_curves
@@ -28,23 +29,37 @@ args = EasyDict({
     # training/model params
     'lr': 0.0001,
     'start_epoch': 1,
-    'num_epochs': 25,
+    'num_epochs': 30,
     'layers_list': ['layer3', 'layer4', 'fc'],
     'continue_epoch': False,
 
     # Dataset params
     'num_classes': 10,
-    'batch_size': 8,
-    'n_total': 49901,
-    'test_n': 4990,
-    'val_n': 9980,
+    'batch_size': 16,
+    'n_total': None,
+    'test_n': None,
+    'val_n': None,
 
     # Path params
     'annotation_path': "dataset/annotation_dict.json",
-    'augmented_annotation_path': "dataset/augmented_annotation_dict.json",
-    'model_path': "model_checkpoints/r2plus1d_augmented-2/",
-    'history_path': "histories/history_r2plus1d_augmented-2.txt"
+    'augmented_annotation_path': None,
+    'model_path': "model_checkpoints/r2plus1d_clean/",
+    'history_path': "histories/history_r2plus1d_clean.txt"
 })
+
+# CLI overrides
+parser = argparse.ArgumentParser(description="Train R(2+1)D on Basketball actions")
+parser.add_argument("--debug_subset", type=int, default=None, help="If set, train on the first N samples deterministically")
+parser.add_argument("--num_epochs", type=int, default=None, help="Override number of epochs")
+parser.add_argument("--read_history", action="store_true", help="Optionally read/plot history after training")
+_cli_args = parser.parse_args()
+
+debug_subset = _cli_args.debug_subset
+if _cli_args.num_epochs is not None:
+    args.num_epochs = _cli_args.num_epochs
+elif debug_subset is not None:
+    # keep debug runs fast unless explicitly overridden (run exactly one epoch given start_epoch)
+    args.num_epochs = args.start_epoch + 1
 
 def train_model(model, dataloaders, criterion, optimizer, args, start_epoch=1, num_epochs=25):
     """
@@ -73,7 +88,7 @@ def train_model(model, dataloaders, criterion, optimizer, args, start_epoch=1, n
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
 
-    for epoch in range(start_epoch, num_epochs):
+    for epoch in range(start_epoch, num_epochs + 1):
 
         # Each epoch has a training and validation phase
         for phase in ['train', 'val']:
@@ -205,7 +220,9 @@ def train_model(model, dataloaders, criterion, optimizer, args, start_epoch=1, n
 
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
-    print('Best val Acc: {:4f}'.format(best_acc))
+    best_idx = int(torch.tensor(val_acc_history).argmax().item()) if len(val_acc_history) > 0 else -1
+    best_epoch = start_epoch + best_idx if best_idx >= 0 else None
+    print('Best val Acc: {:4f} (epoch {})'.format(best_acc, best_epoch))
 
     # load best model weights
     model.load_state_dict(best_model_wts)
@@ -242,12 +259,14 @@ def check_accuracy(loader, model):
 if __name__ == "__main__":
     print("PyTorch Version: ", torch.__version__)
     print("Torchvision Version: ", torchvision.__version__)
-    print("Current Device: ", torch.cuda.current_device())
-    print("Device: ", torch.cuda.device(0))
     print("Cuda Is Available: ", torch.cuda.is_available())
-    print("Device Count: ", torch.cuda.device_count())
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if torch.cuda.is_available():
+        print("Current Device: ", torch.cuda.current_device())
+        print("Device: ", torch.cuda.device(0))
+        print("Device Count: ", torch.cuda.device_count())
+        device = torch.device("cuda")
+    else:
+        device = torch.device("cpu")
 
     # Initialize R(2+1)D Model
     model = models.video.r2plus1d_18(pretrained=args.pretrained, progress=True)
@@ -290,15 +309,48 @@ if __name__ == "__main__":
         sometimes(vidaug.Pepper()),
     ], random_order=True)
 
-    #Load Dataset
-    basketball_dataset = BasketballDataset(annotation_dict=args.annotation_path,
-                                           augmented_dict=args.augmented_annotation_path)
+    # Load Dataset (clean annotation only; vidaug handles stochastic augmentation)
+    basketball_dataset = BasketballDataset(
+        annotation_dict=args.annotation_path,
+        augmented_dict=None,
+        augment=False
+    )
 
-    train_subset, test_subset = random_split(
-    basketball_dataset, [args.n_total-args.test_n, args.test_n], generator=torch.Generator().manual_seed(1))
+    # optional debug subset for fast pipeline checks
+    if debug_subset is not None:
+        if debug_subset <= 0:
+            raise ValueError("--debug_subset must be > 0")
+        debug_n = min(debug_subset, len(basketball_dataset))
+        basketball_dataset = Subset(basketball_dataset, range(debug_n))
+        N = debug_n
+        print(f"DEBUG_SUBSET={debug_n}")
+    else:
+        N = len(basketball_dataset)
 
-    train_subset, val_subset = random_split(
-        train_subset, [args.n_total-args.test_n-args.val_n, args.val_n], generator=torch.Generator().manual_seed(1))
+    test_n = round(0.1 * N)
+    val_n = round(0.1 * N)
+    train_n = N - test_n - val_n
+    if train_n <= 0:
+        raise ValueError("Train split is non-positive. Check dataset size or split ratios.")
+
+    args.n_total = N
+    args.test_n = test_n
+    args.val_n = val_n
+
+    train_subset, temp_subset = random_split(
+        basketball_dataset,
+        [train_n, test_n + val_n],
+        generator=torch.Generator().manual_seed(1)
+    )
+
+    val_subset, test_subset = random_split(
+        temp_subset,
+        [val_n, test_n],
+        generator=torch.Generator().manual_seed(1)
+    )
+
+    assert len(train_subset) + len(val_subset) + len(test_subset) == N, "Split sizes do not sum to dataset length"
+    print(f"N={N} | train={train_n}, val={val_n}, test={test_n}")
 
     train_loader = DataLoader(dataset=train_subset, shuffle=True, batch_size=args.batch_size)
     val_loader = DataLoader(dataset=val_subset, shuffle=False, batch_size=args.batch_size)
@@ -328,8 +380,13 @@ if __name__ == "__main__":
                                                                                                                                             start_epoch=args.start_epoch,
                                                                                                                                             num_epochs=args.num_epochs)
 
-    print("Best Validation Loss: ", min(val_loss_history), "Epoch: ", val_loss_history.index(min(val_loss_history)))
-    print("Best Training Loss: ", min(train_loss_history), "Epoch: ", train_loss_history.index(min(train_loss_history)))
+    epochs_plotted = list(range(args.start_epoch, args.start_epoch + len(train_loss_history)))
+    if len(val_loss_history) > 0:
+        best_val_idx = val_loss_history.index(min(val_loss_history))
+        print("Best Validation Loss: ", min(val_loss_history), "Epoch: ", epochs_plotted[best_val_idx])
+    if len(train_loss_history) > 0:
+        best_train_idx = train_loss_history.index(min(train_loss_history))
+        print("Best Training Loss: ", min(train_loss_history), "Epoch: ", epochs_plotted[best_train_idx])
 
     # Plot Final Curve
     plot_curves(
@@ -340,11 +397,13 @@ if __name__ == "__main__":
         val_acc_history,
         train_f1_score,
         val_f1_score,
-        plot_epoch
+        epochs_plotted,
+        args.model_path
     )
 
-    # Read History
-    read_history(args.history_path)
+    # Read History (optional)
+    if _cli_args.read_history:
+        read_history(args.history_path)
 
     # Check Accuracy with Test Set
     check_accuracy(test_loader, model)

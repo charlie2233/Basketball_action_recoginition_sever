@@ -1,0 +1,1008 @@
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 2.20554 || train accuracy: 0.2 || train f1: 0.2 || train precision: 0.2 || train recall: 0.2
+[[ 0  0  0  0  0  0  2  0  0  0]
+ [ 0  0  0  0  0  0  2  0  0  1]
+ [ 0  0  0  0  0  1 19  0  0  3]
+ [ 0  0  0  0  0  0 19  0  0  0]
+ [ 0  0  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  5  0  0  1]
+ [ 0  1  0  0  0  1 17  0  0  2]
+ [ 0  0  0  0  0  1  2  0  0  2]
+ [ 0  0  0  0  0  2 20  0  1  4]
+ [ 0  0  0  0  0  3 35  0  1 14]]
+val loss: 1.5877 || val accuracy: 0.55 || val f1: 0.55 || val precision: 0.55 || val recall: 0.55
+[[ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  2  0  0  1]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  1]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  1  0  0  3]
+ [ 0  0  0  0  0  0  1  0  0 11]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 20, 'test_n': 2, 'val_n': 2, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 2.33559 || train accuracy: 0.0625 || train f1: 0.0625 || train precision: 0.0625 || train recall: 0.0625
+[[0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 1 1 0 0 0 0 0 0 0]
+ [0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 1 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 4 0 0 0 0 0 0 0 0]
+ [0 8 0 0 0 0 0 0 0 0]]
+val loss: 3.58359 || val accuracy: 0.0 || val f1: 0.0 || val precision: 0.0 || val recall: 0.0
+[[0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 1 0 0 0 0 0]
+ [0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 1, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 2.07088 || train accuracy: 0.275 || train f1: 0.275 || train precision: 0.275 || train recall: 0.275
+[[ 0  0  0  0  0  2  0  0  0  0]
+ [ 0  0  0  0  0  1  0  0  0  2]
+ [ 0  0  2  0  0  4  0  0  0 17]
+ [ 1  0  3  1  0  6  1  1  0  6]
+ [ 0  0  0  0  0  0  0  0  0  1]
+ [ 0  0  0  0  0  2  0  0  0  4]
+ [ 0  0  3  1  0  4  1  0  0 12]
+ [ 0  0  1  0  0  1  0  0  0  3]
+ [ 1  0  0  0  0  9  0  0  2 15]
+ [ 0  0  3  0  0 11  0  2  1 36]]
+val loss: 1.42799 || val accuracy: 0.55 || val f1: 0.55 || val precision: 0.55 || val recall: 0.55
+[[ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  2]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  1]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  4]
+ [ 0  0  0  0  0  0  0  0  1 11]]
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 2.29004 || train accuracy: 0.19375 || train f1: 0.19375 || train precision: 0.19375 || train recall: 0.19375
+[[ 0  0  1  0  0  0  0  0  1  0]
+ [ 0  0  2  0  0  0  0  0  1  0]
+ [ 0  0 20  0  0  0  2  0  1  0]
+ [ 0  0 17  2  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  0]
+ [ 0  0  5  0  0  0  0  0  1  0]
+ [ 0  0 13  1  0  0  2  0  5  0]
+ [ 0  0  4  0  0  0  0  0  0  1]
+ [ 0  0 19  0  0  0  0  0  6  2]
+ [ 0  0 36  0  0  0  7  0  9  1]]
+val loss: 1.67777 || val accuracy: 0.3 || val f1: 0.3 || val precision: 0.3 || val recall: 0.3
+[[0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 2 0 0 0 0 0 1 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 0 0 0 0 0 3 0]
+ [0 0 2 0 0 0 0 0 9 1]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 37085, 'test_n': 3708, 'val_n': 3708, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 0.87499 || train accuracy: 0.69396 || train f1: 0.69396 || train precision: 0.69396 || train recall: 0.69396
+[[ 397    7   68    9   22   60   55    5   39  136]
+ [  23  227   68  136   13  180   27    5   47  110]
+ [  14    9 3726  111    7   33   89    6   12  726]
+ [   2   36  246 2195    2  113   50    3   20  140]
+ [  67   21   19   10  116   49    0    1   13   47]
+ [  49   86   95  192   22 1055   67    9  158  157]
+ [  41   10  131   59    0   46 1733   21  413  566]
+ [  14    5   30    9    2   12   74  170  103  159]
+ [  12    7   17   13    4   62  287   11 3693 1171]
+ [  37   21  603   74    6   84  332   34  919 7277]]
+val loss: 0.63655 || val accuracy: 0.77023 || val f1: 0.77023 || val precision: 0.77023 || val recall: 0.77023
+[[ 87   1   1   0   3   1   5   0   0  10]
+ [  3  39   1  13   3  35   4   2   2   8]
+ [  4   0 495   4   0   4   6   0   0  88]
+ [  2   2  18 285   0  28   2   0   0   6]
+ [ 12   0   0   0  23   0   0   0   0   2]
+ [  5   2   2  11   1 194   9   1   3   8]
+ [ 13   0  12   5   0  13 309   1  19  93]
+ [  0   0   1   0   0   1   5  30   6  25]
+ [  1   1   0   2   0   5  47   5 401 118]
+ [  4   0  48   1   0   5  41   4  64 993]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 37085, 'test_n': 3708, 'val_n': 3708, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 0.86627 || train accuracy: 0.6948 || train f1: 0.6948 || train precision: 0.6948 || train recall: 0.6948
+[[ 431    6   61   13   33   46   53    6   32  117]
+ [  28  209   73  133   28  177   31    3   34  120]
+ [  17   11 3697  120   13   31   90    5    5  744]
+ [   4   26  224 2225   11   94   52    4   11  156]
+ [  73   23   19   15  108   50    1    1   15   38]
+ [  44   78   93  179   23 1106   77   16  131  143]
+ [  41    9  133   51   11   44 1739   20  395  577]
+ [  13    2   36   15    1   20   60  165   94  172]
+ [  25    9   17   14   18   58  267   20 3629 1220]
+ [  48   10  590   75   32   70  337   32  888 7305]]
+val loss: 0.65672 || val accuracy: 0.7678 || val f1: 0.7678 || val precision: 0.7678 || val recall: 0.7678
+[[ 81   0   1   0   0   5   5   6   4   6]
+ [  2  56   0  11   0  24   3   5   2   7]
+ [  3   0 498   3   0   5   5   6   0  81]
+ [  2   9  24 270   0  30   2   2   0   4]
+ [ 19   2   0   0   1  15   0   0   0   0]
+ [  4   6   3  10   0 191   5   5   4   8]
+ [ 11   2   7   1   0   5 288  23  43  85]
+ [  0   0   2   0   0   0   3  47   6  10]
+ [  2   1   0   0   0   5  17   6 436 113]
+ [  7   1  45   0   0  15  21  33  59 979]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 2.25987 || train accuracy: 0.19375 || train f1: 0.19375 || train precision: 0.19375 || train recall: 0.19375
+[[ 0  0  1  0  0  0  0  1  0  0]
+ [ 0  0  2  1  0  0  0  0  0  0]
+ [ 0  0 16  4  0  0  0  2  0  1]
+ [ 0  0  8 10  0  0  1  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0]
+ [ 0  0  5  1  0  0  0  0  0  0]
+ [ 0  0 17  1  0  0  1  2  0  0]
+ [ 0  0  5  0  0  0  0  0  0  0]
+ [ 0  0 12  8  0  0  0  1  2  4]
+ [ 0  0 34 13  0  0  1  2  1  2]]
+val loss: 1.75816 || val accuracy: 0.4 || val f1: 0.4 || val precision: 0.4 || val recall: 0.4
+[[0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 3 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 1 0 0 0 0 0 0 3]
+ [0 0 7 0 0 0 0 0 0 5]]
+
+checkpoint name: r2plus1d_multiclass_2_0.0001 
+train loss: 1.00386 || train accuracy: 0.93125 || train f1: 0.93125 || train precision: 0.93125 || train recall: 0.93125
+[[ 1  0  1  0  0  0  0  0  0  0]
+ [ 0  1  1  1  0  0  0  0  0  0]
+ [ 0  0 23  0  0  0  0  0  0  0]
+ [ 0  0  0 19  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0]
+ [ 0  0  1  0  0  5  0  0  0  0]
+ [ 0  0  0  1  0  0 20  0  0  0]
+ [ 0  0  1  0  0  0  0  4  0  0]
+ [ 0  0  1  0  0  0  0  0 26  0]
+ [ 0  0  3  0  0  0  0  0  0 50]]
+val loss: 1.3881 || val accuracy: 0.6 || val f1: 0.6 || val precision: 0.6 || val recall: 0.6
+[[0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 3 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 1 3]
+ [0 0 1 0 0 0 0 0 3 8]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 37085, 'test_n': 3708, 'val_n': 3708, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 2, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 200, 'test_n': 20, 'val_n': 20, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 2.1364 || train accuracy: 0.25 || train f1: 0.25 || train precision: 0.25 || train recall: 0.25
+[[ 0  0  0  0  0  0  0  0  0  2]
+ [ 0  0  0  0  1  0  0  0  1  1]
+ [ 2  0  0  0  7  1  2  0  0 11]
+ [ 0  0  0  1  8  0  2  0  0  8]
+ [ 0  0  0  0  0  0  0  0  0  1]
+ [ 0  0  0  0  1  0  0  0  2  3]
+ [ 0  0  0  0  7  0  1  0  1 12]
+ [ 0  0  0  0  1  0  0  0  0  4]
+ [ 0  0  0  0  4  0  0  0  5 18]
+ [ 0  0  1  0 15  0  1  0  3 33]]
+val loss: 1.40879 || val accuracy: 0.45 || val f1: 0.45 || val precision: 0.45 || val recall: 0.45
+[[0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 3]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 1]
+ [0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 4]
+ [0 0 0 0 0 0 0 0 3 9]]
+
+checkpoint name: r2plus1d_multiclass_2_0.0001 
+train loss: 0.97838 || train accuracy: 0.8875 || train f1: 0.8875 || train precision: 0.8875 || train recall: 0.8875
+[[ 0  0  0  0  0  0  1  0  0  1]
+ [ 0  1  0  0  0  0  0  0  0  2]
+ [ 0  0 19  0  0  0  0  0  1  3]
+ [ 0  0  0 17  0  0  0  0  0  2]
+ [ 0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  3  0  0  3  0]
+ [ 0  0  0  1  0  0 20  0  0  0]
+ [ 0  0  0  0  0  0  0  5  0  0]
+ [ 0  0  0  0  0  0  0  0 25  2]
+ [ 0  0  0  1  0  0  0  0  1 51]]
+val loss: 1.25812 || val accuracy: 0.6 || val f1: 0.6 || val precision: 0.6 || val recall: 0.6
+[[ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  2  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  4]
+ [ 0  0  0  0  0  0  0  0  2 10]]
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 20, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 37085, 'test_n': 3708, 'val_n': 3708, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+============================== Base_model: r2plus1d_multiclass ==============================
+arguments: {'base_model_name': 'r2plus1d_multiclass', 'pretrained': True, 'lr': 0.0001, 'start_epoch': 1, 'num_epochs': 30, 'layers_list': ['layer3', 'layer4', 'fc'], 'continue_epoch': False, 'num_classes': 10, 'batch_size': 16, 'n_total': 37085, 'test_n': 3708, 'val_n': 3708, 'annotation_path': 'dataset/annotation_dict.json', 'augmented_annotation_path': None, 'model_path': 'model_checkpoints/r2plus1d_clean/', 'history_path': 'histories/history_r2plus1d_clean.txt'}
+
+checkpoint name: r2plus1d_multiclass_1_0.0001 
+train loss: 0.87331 || train accuracy: 0.69166 || train f1: 0.69166 || train precision: 0.69166 || train recall: 0.69166
+[[ 423   15   64   10   29   46   49   10   35  117]
+ [  31  213   67  140   21  172   29    5   35  123]
+ [  28   17 3648  115    0   31   89    7    6  792]
+ [   9   27  270 2159    2  103   70    7   14  146]
+ [  76   19   16   10  117   56    2    3   13   31]
+ [  50   77  120  183   16 1082   79   12  117  154]
+ [  32   10  134   69    0   36 1729   17  383  610]
+ [  17    1   29   15    0   23   69  177   85  162]
+ [  40   13   16   14    6   58  279   17 3639 1195]
+ [  55   24  569   75    2   51  338   33  906 7334]]
+val loss: 0.67387 || val accuracy: 0.75566 || val f1: 0.75566 || val precision: 0.75566 || val recall: 0.75566
+[[ 67   3   3   0   3   7   6   6   7   6]
+ [  2  57   1  15   2  23   0   1   3   6]
+ [  1   1 531   7   0   4   4   4   2  47]
+ [  0   3  11 313   0   8   1   0   0   7]
+ [ 13   5   0   0  17   1   0   0   1   0]
+ [  2   9  11  19   2 181   2   2   3   5]
+ [  0   1  18   6   0  18 267  10  90  55]
+ [  0   0   4   0   0   2   6  41   5  10]
+ [  2   2   1   0   0   3   7   5 516  44]
+ [  1   2  76   4   0  12  35  11 207 812]]
+
+checkpoint name: r2plus1d_multiclass_2_0.0001 
+train loss: 0.5299 || train accuracy: 0.81048 || train f1: 0.81048 || train precision: 0.81048 || train recall: 0.81048
+[[ 613    9   22    1   25   26   33    7   16   46]
+ [  22  506   27   74   17  111    9    7   14   49]
+ [   9   10 4092   51    1   23   57    7    3  480]
+ [   4   33   90 2539    0   70   22    5    7   37]
+ [  39   19    2    3  236   30    0    1    2   11]
+ [  39   73   46   89   16 1508   20    2   45   52]
+ [  30    5   63   28    1   20 2187   17  273  396]
+ [   4    6   15    3    0    9   35  376   50   80]
+ [  20   11    6    6    2   30  231   24 4135  812]
+ [  38   14  402   34    0   34  290   39  682 7854]]
+val loss: 0.56662 || val accuracy: 0.79207 || val f1: 0.79207 || val precision: 0.79207 || val recall: 0.79207
+[[ 83   3   2   0   4   1  12   0   0   3]
+ [  4  76   1   9   2  14   2   0   2   0]
+ [  3   1 563   3   0   2  11   0   0  18]
+ [  0  10  12 310   0   5   3   0   0   3]
+ [  8   1   0   0  26   0   0   0   1   1]
+ [  1  12   5  17   5 183   5   0   5   3]
+ [  8   0  15   1   0   6 362   1  19  53]
+ [  2   1   2   0   0   1   8  43   5   6]
+ [  3   1   1   0   0   3  42   2 400 128]
+ [  4   4 122   2   0   7  74   7  49 891]]
+
+checkpoint name: r2plus1d_multiclass_3_0.0001 
+train loss: 0.31972 || train accuracy: 0.88695 || train f1: 0.88695 || train precision: 0.88695 || train recall: 0.88695
+[[ 708    2    6    1   16   11   25    2    4   23]
+ [  11  693    7   34   10   48    3    1    7   22]
+ [   8    6 4373   24    0    8   21    3    1  289]
+ [   0   20   37 2678    1   42    9    2    1   17]
+ [  14    9    2    3  296   10    0    0    3    6]
+ [  15   38   10   53   11 1697    9    4   22   31]
+ [  14    4   20   10    0   11 2514    5  185  257]
+ [   2    2    6    1    0    4   15  479   20   49]
+ [   2    6    3    2    2   14  169   11 4520  548]
+ [  21    8  270   15    0   17  216   27  456 8357]]
+val loss: 0.56142 || val accuracy: 0.81634 || val f1: 0.81634 || val precision: 0.81634 || val recall: 0.81634
+[[ 80   4   5   0   3   1   6   0   1   8]
+ [  0  78   3  14   1   5   6   0   0   3]
+ [  0   0 529   7   0   1  10   0   0  54]
+ [  0   0   5 332   1   1   2   0   0   2]
+ [  1   1   1   0  31   0   0   0   0   3]
+ [  1  15   8  21   1 165   9   0   4  12]
+ [  2   1   9   3   0   2 347   4  31  66]
+ [  0   0   2   1   0   0   4  44   4  13]
+ [  2   5   1   1   0   1  16   2 427 125]
+ [  2   1  74   3   0   3  36   5  42 994]]
+
+checkpoint name: r2plus1d_multiclass_4_0.0001 
+train loss: 0.19087 || train accuracy: 0.93404 || train f1: 0.93404 || train precision: 0.93404 || train recall: 0.93404
+[[ 738    5    6    0   11    8   14    3    4    9]
+ [   7  761    7   13    3   30    0    1    6    8]
+ [   2    1 4522   17    0    4   12    2    0  173]
+ [   0   10   31 2731    0   18    6    2    0    9]
+ [  10    2    0    1  317    9    0    0    0    4]
+ [   9   30   11   27    8 1769   10    4   12   10]
+ [   9    0   12    9    0    4 2747    5   89  145]
+ [   2    0    3    1    0    3   12  521   17   19]
+ [   4    2    3    1    2   13   69    9 4852  322]
+ [   6    5  159   13    0    8  123   14  305 8754]]
+val loss: 0.60322 || val accuracy: 0.8069 || val f1: 0.8069 || val precision: 0.8069 || val recall: 0.8069
+[[101   0   0   0   1   0   3   0   0   3]
+ [  7  67   1  10   1  13   0   3   5   3]
+ [ 12   0 506   4   0   1  10   1   1  66]
+ [  4   2  10 315   0   6   3   0   0   3]
+ [  9   1   0   0  27   0   0   0   0   0]
+ [ 13   2   2  11   4 186   5   1   2  10]
+ [ 19   0   7   2   0   0 353   1  29  54]
+ [  2   0   0   0   0   0   6  40   7  13]
+ [  4   1   1   0   0   0  26   0 465  83]
+ [ 19   2  53   0   0   3  59   4  88 932]]
+
+checkpoint name: r2plus1d_multiclass_5_0.0001 
+train loss: 0.12281 || train accuracy: 0.9574 || train f1: 0.9574 || train precision: 0.9574 || train recall: 0.9574
+[[ 765    1    3    0   10    7    3    2    3    4]
+ [   5  769    4   17    1   19    3    2    6   10]
+ [   1    2 4608   11    0    4    7    1    1   98]
+ [   1   13   15 2744    0   14    7    1    1   11]
+ [  10    5    0    0  320    8    0    0    0    0]
+ [   3   18   11   14    5 1811    4    0   10   14]
+ [   4    5    6    7    0    2 2848    3   57   88]
+ [   1    0    1    2    0    2    6  542    9   15]
+ [   2    3    2    3    0    3   59    6 5013  186]
+ [   4    6   99    7    0    7   79    5  195 8985]]
+val loss: 0.71979 || val accuracy: 0.7891 || val f1: 0.7891 || val precision: 0.7891 || val recall: 0.7891
+[[ 95   0   0   0   6   0   6   0   0   1]
+ [  0  70   1  11   1  18   2   1   2   4]
+ [  6   2 485  16   0  11   5   0   1  75]
+ [  0   0   6 325   1  10   0   0   1   0]
+ [  1   1   0   0  33   2   0   0   0   0]
+ [  2   0   0  12   2 214   2   0   0   4]
+ [ 11   2   4   5   0  10 356   1  24  52]
+ [  1   0   0   2   0   7   6  39   2  11]
+ [  4   1   0   1   1  10  58   3 435  67]
+ [  7   3  41   7   3  17  65   8 135 874]]
+
+checkpoint name: r2plus1d_multiclass_6_0.0001 
+train loss: 0.09419 || train accuracy: 0.96872 || train f1: 0.96872 || train precision: 0.96872 || train recall: 0.96872
+[[ 764    0    3    0    6    6    8    0    3    8]
+ [   5  801    2    9    2    9    0    0    3    5]
+ [   3    0 4620   10    0    2    4    1    1   92]
+ [   0    3    9 2781    0    7    1    0    2    4]
+ [   4    5    0    0  328    5    0    0    0    1]
+ [   5    7    6   12    1 1836    1    0   11   11]
+ [   7    0    7    6    0    2 2880    3   50   65]
+ [   1    0    0    1    0    2    2  555    6   11]
+ [   2    0    1    0    2    8   49    3 5075  137]
+ [   6    4   70    8    0    7   67    7  117 9101]]
+val loss: 0.75997 || val accuracy: 0.80016 || val f1: 0.80016 || val precision: 0.80016 || val recall: 0.80016
+[[ 87   0   1   0   0   2   5   0   3  10]
+ [  1  55   2  11   0  23   4   2   6   6]
+ [  0   0 527   3   0   2   2   0   0  67]
+ [  1   0  10 316   0   9   0   1   0   6]
+ [ 10   1   2   0  18   5   0   0   1   0]
+ [  3   0   4  10   1 204   0   0   5   9]
+ [  2   0  14   2   0   9 295   0  39 104]
+ [  1   0   2   0   0   0   5  40   9  11]
+ [  4   0   1   0   0   4  20   0 453  98]
+ [  3   0  58   1   0   7  22   2  95 972]]
+
+checkpoint name: r2plus1d_multiclass_7_0.0001 
+train loss: 0.0759 || train accuracy: 0.97533 || train f1: 0.97533 || train precision: 0.97533 || train recall: 0.97533
+[[ 778    1    1    0    7    2    4    0    2    3]
+ [   0  809    1    7    2    7    1    0    4    5]
+ [   1    1 4653    8    1    2    4    0    0   63]
+ [   0    5   16 2767    0   10    2    1    1    5]
+ [   8    2    0    0  327    3    0    0    1    2]
+ [   3   11    1   16    2 1837    4    1   10    5]
+ [   4    0    9    3    0    4 2921    0   31   48]
+ [   0    0    1    0    0    0    3  558    2   14]
+ [   2    4    1    2    1    6   35    4 5116  106]
+ [   2    3   50    6    2    3   41    6  103 9171]]
+val loss: 0.85263 || val accuracy: 0.79612 || val f1: 0.79612 || val precision: 0.79612 || val recall: 0.79612
+[[ 91   1   2   0   0   0   2   0   3   9]
+ [  3  70   4  11   3   6   0   0   6   7]
+ [  1   0 551   2   0   0   0   0   0  47]
+ [  0   3  13 316   0   2   1   0   1   7]
+ [  6   0   1   0  29   1   0   0   0   0]
+ [  3   5   6  13   3 181   1   0   5  19]
+ [  6   0  16   0   1   6 263   1  39 133]
+ [  2   0   3   1   0   1   1  29  10  21]
+ [  1   2   4   0   0   0  14   2 449 108]
+ [  8   0  79   0   0   4  13   3  80 973]]
+
+checkpoint name: r2plus1d_multiclass_8_0.0001 
+train loss: 0.07477 || train accuracy: 0.97536 || train f1: 0.97536 || train precision: 0.97536 || train recall: 0.97536
+[[ 781    1    2    0    2    1    3    1    3    4]
+ [   3  802    3    9    0    6    2    2    2    7]
+ [   0    2 4638    7    0    4    7    2    0   73]
+ [   0    3   10 2769    0   11    4    3    1    6]
+ [   4    2    0    0  331    2    0    0    0    4]
+ [   2    2    4   16    3 1842    3    3    8    7]
+ [   3    0    5    1    0    2 2927    4   30   48]
+ [   0    2    2    3    0    5    2  550    5    9]
+ [   1    4    0    0    1    6   25    4 5133  103]
+ [   3    3   66    6    3    5   39    6   91 9165]]
+val loss: 0.80448 || val accuracy: 0.79018 || val f1: 0.79018 || val precision: 0.79018 || val recall: 0.79018
+[[ 96   3   0   0   0   0   5   0   4   0]
+ [  4  85   0   3   1   8   0   1   6   2]
+ [  9   8 499   4   0   6   8   0   0  67]
+ [  2  24   4 295   0  16   1   0   0   1]
+ [  8   3   0   0  24   2   0   0   0   0]
+ [  4  34   1   3   1 185   2   0   3   3]
+ [ 12   4   6   4   0   7 346   4  33  49]
+ [  1   0   4   0   0   0   5  48   4   6]
+ [  5   4   2   0   0   1  34   0 474  60]
+ [  9  10  47   1   1   8  53   8 145 878]]
+
+checkpoint name: r2plus1d_multiclass_9_0.0001 
+train loss: 0.06301 || train accuracy: 0.9792 || train f1: 0.9792 || train precision: 0.9792 || train recall: 0.9792
+[[ 768    1    1    0    6    4    5    0    3   10]
+ [   3  809    2    6    2    6    0    1    1    6]
+ [   2    0 4666    8    1    2    3    0    1   50]
+ [   0    5   10 2775    0    8    3    0    0    6]
+ [   6    1    1    1  330    4    0    0    0    0]
+ [   4    8    3   11    4 1845    2    2    5    6]
+ [   3    1    7    1    0    3 2941    4   19   41]
+ [   0    1    0    2    0    3    2  553    8    9]
+ [   4    1    0    0    0    1   22    3 5163   83]
+ [   9    0   41    6    1    7   32    9   80 9202]]
+val loss: 0.8097 || val accuracy: 0.81176 || val f1: 0.81176 || val precision: 0.81176 || val recall: 0.81176
+[[ 78   1   2   0   6   0   5   4   0  12]
+ [  0  69   0  16   3   9   2   1   1   9]
+ [  0   0 526   7   0   1   6   0   0  61]
+ [  0   1   6 330   0   2   0   1   0   3]
+ [  2   2   0   0  32   1   0   0   0   0]
+ [  2   4   4  20   5 190   2   0   2   7]
+ [  2   0  13   5   0   4 338   6  34  63]
+ [  0   0   4   0   0   0   1  45   4  14]
+ [  3   1   3   0   1   3  19   2 451  97]
+ [  1   3  71   3   2   7  42   4  76 951]]
+
+checkpoint name: r2plus1d_multiclass_10_0.0001 
+train loss: 0.0553 || train accuracy: 0.98217 || train f1: 0.98217 || train precision: 0.98217 || train recall: 0.98217
+[[ 787    1    1    0    2    1    4    0    0    2]
+ [   3  801    0    6    2    8    3    0    6    7]
+ [   1    1 4675    5    0    2    4    0    0   45]
+ [   0    1    8 2775    0    9    3    2    1    8]
+ [   1    0    0    0  342    0    0    0    0    0]
+ [   1    7    2   14    0 1851    2    2    2    9]
+ [   4    0    2    2    0    4 2949    1   18   40]
+ [   0    0    2    1    0    0    4  557    6    8]
+ [   0    2    0    2    0    1   16    3 5186   67]
+ [   1    5   41    4    0    7   28    5   79 9217]]
+val loss: 0.85424 || val accuracy: 0.80313 || val f1: 0.80313 || val precision: 0.80313 || val recall: 0.80313
+[[ 92   1   1   0   0   0   6   0   3   5]
+ [  1  79   1   7   2  14   0   0   1   5]
+ [  2   0 478   2   0   2  14   1   0 102]
+ [  1   6   6 308   0  11   2   0   0   9]
+ [  7   2   0   0  27   0   0   0   0   1]
+ [  3   3   3   6   2 198   1   2   3  15]
+ [  5   1   7   1   0   5 342   0  37  67]
+ [  0   0   1   0   0   0   7  40   9  11]
+ [  2   5   0   1   0   4  23   2 469  74]
+ [  7   2  30   2   0   4  47   4 119 945]]
+
+checkpoint name: r2plus1d_multiclass_11_0.0001 
+train loss: 0.04993 || train accuracy: 0.98328 || train f1: 0.98328 || train precision: 0.98328 || train recall: 0.98328
+[[ 779    6    2    0    1    0    4    1    1    4]
+ [   3  812    1    5    0    8    2    1    1    3]
+ [   0    0 4672   10    0    1    4    2    0   44]
+ [   0    4    9 2779    0    7    2    0    0    6]
+ [   2    0    0    0  339    1    0    0    0    1]
+ [   2    5    2    7    0 1867    0    0    4    3]
+ [   2    0    5    4    0    2 2955    2   18   32]
+ [   1    0    1    1    0    1    3  556    8    7]
+ [   5    3    0    1    0    3   19    4 5180   62]
+ [   3    1   41    5    0    2   29    2   70 9234]]
+val loss: 0.89952 || val accuracy: 0.798 || val f1: 0.798 || val precision: 0.798 || val recall: 0.798
+[[ 90   0   2   0   0   5   5   0   3   3]
+ [  0  46   2  15   3  34   0   1   4   5]
+ [  1   0 526  14   1   6   7   1   0  45]
+ [  2   0   4 324   0   9   1   0   1   2]
+ [  2   0   1   0  32   1   0   0   0   1]
+ [  1   1   7  13   1 204   3   0   0   6]
+ [  4   0   9   6   0  12 329   6  32  67]
+ [  0   0   3   0   0   4   4  48   4   5]
+ [  2   2   2   0   0   4  22   3 455  90]
+ [  3   0  77   5   0  14  51   9  96 905]]
+
+checkpoint name: r2plus1d_multiclass_12_0.0001 
+train loss: 0.05269 || train accuracy: 0.98197 || train f1: 0.98197 || train precision: 0.98197 || train recall: 0.98197
+[[ 779    1    2    0    2    3    7    0    0    4]
+ [   0  816    4    7    0    8    0    0    1    0]
+ [   2    1 4677    8    0    1    4    1    1   38]
+ [   1    4    9 2774    0    9    3    0    0    7]
+ [   5    1    0    0  334    1    0    0    1    1]
+ [   4    4    4    6    1 1852    3    4    5    7]
+ [   4    0    4    5    1    4 2948    1   30   23]
+ [   2    0    0    0    0    1    3  560    6    6]
+ [   2    3    0    0    0    2   27    4 5171   68]
+ [   5    3   40    3    0   10   26    4   73 9223]]
+val loss: 0.87375 || val accuracy: 0.80394 || val f1: 0.80394 || val precision: 0.80394 || val recall: 0.80394
+[[  75    0    1    0    2    3    5    1    4   17]
+ [   0   67    0   10    0   12    0    4    6   11]
+ [   0    0  499    5    0    0    8    0    0   89]
+ [   0    1    9  308    0    6    3    1    0   15]
+ [   4    0    1    0   26    2    0    1    0    3]
+ [   0    4    7   13    2  188    3    1    1   17]
+ [   2    0    7    1    0    2  314    3   43   93]
+ [   0    0    2    0    0    1    3   50    2   10]
+ [   2    1    0    0    0    8   18    2  443  106]
+ [   1    0   42    1    0    4   27    4   70 1011]]
+
+checkpoint name: r2plus1d_multiclass_13_0.0001 
+train loss: 0.04417 || train accuracy: 0.98581 || train f1: 0.98581 || train precision: 0.98581 || train recall: 0.98581
+[[ 776    0    0    0    6    3    1    2    2    8]
+ [   0  818    1    4    1    6    1    1    0    4]
+ [   0    1 4687    7    0    4    5    1    0   28]
+ [   0    6    2 2781    0    8    0    2    1    7]
+ [   4    0    2    0  332    2    0    1    0    2]
+ [   3    8    7    8    0 1848    3    0    7    6]
+ [   2    0    3    1    0    2 2971    0   18   23]
+ [   0    0    1    3    0    1    1  565    1    6]
+ [   0    1    1    0    0    6   17    3 5200   49]
+ [   3    1   31    2    2    4   20    2   52 9270]]
+val loss: 0.84622 || val accuracy: 0.79773 || val f1: 0.79773 || val precision: 0.79773 || val recall: 0.79773
+[[ 85   3   3   0   1  10   1   1   1   3]
+ [  0  77   1  10   2  15   0   2   1   2]
+ [  1   3 515  28   0   3   4   0   0  47]
+ [  0   0   4 331   0   6   0   0   0   2]
+ [  2   2   0   0  29   4   0   0   0   0]
+ [  2   4   2  17   2 205   0   0   0   4]
+ [  9   2  12   8   0  12 301   4  40  77]
+ [  0   0   1   3   0   3   2  48   6   5]
+ [  2   3   1   2   0   2  12   5 461  92]
+ [  4   6  74  16   0  22  37  15  80 906]]
+
+checkpoint name: r2plus1d_multiclass_14_0.0001 
+train loss: 0.04077 || train accuracy: 0.98588 || train f1: 0.98588 || train precision: 0.98588 || train recall: 0.98588
+[[ 783    2    3    0    1    1    1    0    2    5]
+ [   3  815    0    1    1    9    0    0    3    4]
+ [   4    0 4689    5    0    4    2    0    1   28]
+ [   0    5    9 2782    0    5    4    0    0    2]
+ [   0    1    0    0  336    5    0    0    0    1]
+ [   4    4    4    9    1 1855    3    1    4    5]
+ [   3    2    3    3    0    1 2962    3   19   24]
+ [   0    0    1    1    0    2    2  568    1    3]
+ [   0    0    1    0    0    5   17    0 5200   54]
+ [   5    6   28    4    0    5   27    4   48 9260]]
+val loss: 0.82483 || val accuracy: 0.81311 || val f1: 0.81311 || val precision: 0.81311 || val recall: 0.81311
+[[ 90   3   2   0   4   0   5   0   2   2]
+ [  1  85   1   5   4   5   1   0   2   6]
+ [  0   0 544   5   0   1  11   0   0  40]
+ [  2   5   7 306   2  12   3   1   1   4]
+ [  2   1   0   0  34   0   0   0   0   0]
+ [  2  12   4   6  10 188   1   2   3   8]
+ [  7   0  12   1   0   7 353   3  42  40]
+ [  1   0   2   0   0   0   9  38   8  10]
+ [  3   3   1   0   1   2  18   0 471  81]
+ [  6   2  73   1   0   6  62   3 101 906]]
+
+checkpoint name: r2plus1d_multiclass_15_0.0001 
+train loss: 0.03432 || train accuracy: 0.9883 || train f1: 0.9883 || train precision: 0.9883 || train recall: 0.9883
+[[ 787    1    0    0    0    0    5    0    1    4]
+ [   0  823    1    4    1    4    1    0    1    1]
+ [   2    2 4693    6    0    1    1    0    0   28]
+ [   0    2    8 2784    0    4    3    1    0    5]
+ [   2    0    0    0  339    0    0    0    1    1]
+ [   1    3    3    4    1 1870    1    1    2    4]
+ [   0    1    1    2    0    2 2983    2   11   18]
+ [   0    0    0    0    0    0    4  567    3    4]
+ [   1    0    0    0    0    2   11    4 5206   53]
+ [   1    1   33    2    0    3   19    5   53 9270]]
+val loss: 0.912 || val accuracy: 0.79854 || val f1: 0.79854 || val precision: 0.79854 || val recall: 0.79854
+[[ 96   1   2   0   2   1   2   1   0   3]
+ [  1  87   1   4   0  10   0   2   1   4]
+ [  5   1 546   7   0   4   7   2   0  29]
+ [  1   7   9 284   0  37   1   0   0   4]
+ [ 10   0   0   0  23   4   0   0   0   0]
+ [  2   6   5   5   3 210   2   0   0   3]
+ [ 10   2  12   4   0   5 349  10  18  55]
+ [  0   1   3   0   0   0   3  53   3   5]
+ [  4   2   1   0   0   3  40  10 393 127]
+ [  9   4 103   0   1   7  45  25  46 920]]
+
+checkpoint name: r2plus1d_multiclass_16_0.0001 
+train loss: 0.03434 || train accuracy: 0.98864 || train f1: 0.98864 || train precision: 0.98864 || train recall: 0.98864
+[[ 781    1    0    0    2    1    5    1    1    6]
+ [   0  822    2    3    0    3    1    1    0    4]
+ [   1    2 4701    3    0    3    1    0    0   22]
+ [   1    0    5 2793    0    6    2    0    0    0]
+ [   2    0    0    0  339    1    0    0    1    0]
+ [   2    4    1    6    0 1869    2    1    4    1]
+ [   3    1    2    0    0    2 2969    0   17   26]
+ [   0    0    0    0    0    0    1  570    2    5]
+ [   2    0    0    0    1    1   18    1 5209   45]
+ [   4    3   24    2    0    2   24    2   47 9279]]
+val loss: 0.90796 || val accuracy: 0.80906 || val f1: 0.80906 || val precision: 0.80906 || val recall: 0.80906
+[[ 86   2   3   0   1   0   5   0   2   9]
+ [  2  69   1  13   0  14   0   2   3   6]
+ [  2   0 507  27   0   1   7   0   0  57]
+ [  0   1   3 331   0   3   2   0   0   3]
+ [  8   1   0   1  25   2   0   0   0   0]
+ [  3   6   2  18   0 196   3   1   2   5]
+ [  2   0   9   8   0   2 338   1  31  74]
+ [  0   0   1   0   0   0   4  45   3  15]
+ [  4   2   0   0   0   0  16   3 463  92]
+ [  2   2  57   4   0   4  38   3 110 940]]
+
+checkpoint name: r2plus1d_multiclass_17_0.0001 
+train loss: 0.03779 || train accuracy: 0.98719 || train f1: 0.98719 || train precision: 0.98719 || train recall: 0.98719
+[[ 785    1    0    1    0    1    3    0    2    5]
+ [   2  818    1    5    2    4    0    0    1    3]
+ [   0    2 4690    4    0    4    2    1    0   30]
+ [   0    2    8 2780    0    5    4    0    1    7]
+ [   0    2    1    1  335    4    0    0    0    0]
+ [   0    6    5   11    2 1857    4    0    2    3]
+ [   2    0    2    3    0    3 2973    1   18   18]
+ [   0    0    0    0    0    1    3  570    2    2]
+ [   0    1    2    1    0    4   19    1 5207   42]
+ [   3    1   23    3    0    6   20    1   56 9274]]
+val loss: 0.90606 || val accuracy: 0.8034 || val f1: 0.8034 || val precision: 0.8034 || val recall: 0.8034
+[[ 84   2   1   0   5   2   4   1   2   7]
+ [  0  63   2  11   2  17   2   3   4   6]
+ [  2   0 513   5   0   4   6   0   0  71]
+ [  2   2   9 312   1  11   3   0   0   3]
+ [  2   1   1   0  29   4   0   0   0   0]
+ [  0   3   4   7   2 209   0   3   4   4]
+ [  6   0   9   3   0   7 334   1  34  71]
+ [  0   0   2   0   0   1   3  48   4  10]
+ [  1   2   0   0   0  10  17   8 473  69]
+ [  3   0  47   2   1   5  37  13 138 914]]
+
+checkpoint name: r2plus1d_multiclass_18_0.0001 
+train loss: 0.03121 || train accuracy: 0.98942 || train f1: 0.98942 || train precision: 0.98942 || train recall: 0.98942
+[[ 783    0    3    0    4    1    4    0    1    2]
+ [   1  821    0    3    1    3    2    0    2    3]
+ [   0    0 4694    7    0    1    0    0    1   30]
+ [   0    4    8 2786    0    6    0    0    0    3]
+ [   3    1    0    0  337    0    0    0    0    2]
+ [   1    2    3    6    1 1869    1    1    5    1]
+ [   4    0    1    2    0    1 2977    0   19   16]
+ [   0    1    0    0    0    1    0  573    2    1]
+ [   0    3    0    0    0    3   20    0 5212   39]
+ [   2    1   31    3    0    4   14    0   29 9303]]
+val loss: 1.04905 || val accuracy: 0.79585 || val f1: 0.79585 || val precision: 0.79585 || val recall: 0.79585
+[[  83    2    1    0    0    0    5    0    1   16]
+ [   0   69    1   11    0   14    1    2    5    7]
+ [   3    0  479    9    0    1    2    1    0  106]
+ [   1    2    6  312    0   10    2    0    1    9]
+ [   9    4    2    0   16    1    0    0    1    4]
+ [   6    4    4    7    0  192    1    0    7   15]
+ [   3    0    5    3    0    3  280    4   44  123]
+ [   0    0    1    0    0    0    3   37    7   20]
+ [   1    1    0    0    0    1   10    1  456  110]
+ [   2    0   35    0    0    4   17    4   71 1027]]
+
+checkpoint name: r2plus1d_multiclass_19_0.0001 
+train loss: 0.03002 || train accuracy: 0.98999 || train f1: 0.98999 || train precision: 0.98999 || train recall: 0.98999
+[[ 781    1    2    1    3    1    4    0    0    5]
+ [   3  815    2    5    3    4    0    0    1    3]
+ [   1    0 4709    5    0    0    1    0    1   16]
+ [   0    3    5 2785    0    6    4    0    1    3]
+ [   4    1    1    0  333    3    0    0    0    1]
+ [   2    5    1    7    3 1866    1    1    2    2]
+ [   2    0    0    1    0    3 2982    0   17   15]
+ [   0    0    0    0    0    0    0  571    2    5]
+ [   1    0    1    0    0    2   13    4 5221   35]
+ [   2    5   19    3    0    1   13    3   32 9309]]
+val loss: 0.96024 || val accuracy: 0.798 || val f1: 0.798 || val precision: 0.798 || val recall: 0.798
+[[ 88   1   1   0   1   1   6   2   3   5]
+ [  0  77   3   5   1   6   2   3   4   9]
+ [  0   0 538   5   0   1   8   2   0  47]
+ [  1  13  13 305   0   2   2   0   2   5]
+ [  7   2   0   0  27   1   0   0   0   0]
+ [  3   9   8  10   2 184   5   3   5   7]
+ [  4   0   9   3   0   3 351  13  35  47]
+ [  1   0   2   0   0   0   3  50   7   5]
+ [  3   1   1   0   0   2  35   9 458  71]
+ [  5   1  72   4   3   4  61  13 116 881]]
+
+checkpoint name: r2plus1d_multiclass_20_0.0001 
+train loss: 0.02362 || train accuracy: 0.99221 || train f1: 0.99221 || train precision: 0.99221 || train recall: 0.99221
+[[ 790    2    0    0    0    0    2    0    0    4]
+ [   2  825    1    0    1    3    1    0    0    3]
+ [   0    0 4715    1    0    2    2    0    1   12]
+ [   0    2    4 2799    0    1    1    0    0    0]
+ [   1    0    0    0  339    2    0    0    0    1]
+ [   2    3    0    4    0 1873    3    1    3    1]
+ [   0    0    0    2    0    3 2985    4   11   15]
+ [   0    0    0    0    0    0    3  569    2    4]
+ [   0    0    0    0    0    3    8    0 5228   38]
+ [   1    0   19    0    0    1   10    4   37 9315]]
+val loss: 1.05175 || val accuracy: 0.79558 || val f1: 0.79558 || val precision: 0.79558 || val recall: 0.79558
+[[ 95   1   1   0   0   0   3   0   2   6]
+ [  4  73   1   6   3   7   2   1   6   7]
+ [  7   2 488   4   1   2   8   0   0  89]
+ [  3   2   9 310   0   9   5   0   0   5]
+ [ 10   0   0   0  27   0   0   0   0   0]
+ [ 10   8   4   7   4 180   7   0   3  13]
+ [ 12   0   6   3   0   1 322   3  57  61]
+ [  4   0   1   0   0   0   5  42   7   9]
+ [  3   2   1   0   0   0  14   3 500  57]
+ [ 10   3  44   1   0   4  36   7 142 913]]
+
+checkpoint name: r2plus1d_multiclass_21_0.0001 
+train loss: 0.03299 || train accuracy: 0.98955 || train f1: 0.98955 || train precision: 0.98955 || train recall: 0.98955
+[[ 783    3    3    0    0    0    4    0    1    4]
+ [   0  820    0    5    1    5    1    0    2    2]
+ [   1    1 4702    5    0    1    3    0    0   20]
+ [   1    3    8 2785    0    6    1    0    0    3]
+ [   1    1    0    0  339    0    0    0    0    2]
+ [   2    2    1    3    0 1872    2    0    2    6]
+ [   2    1    1    3    0    0 2976    2   18   17]
+ [   0    0    2    0    0    0    1  571    0    4]
+ [   1    0    0    0    0    2   15    2 5221   36]
+ [   3    2   20    1    0    5   17    4   45 9290]]
+val loss: 0.91745 || val accuracy: 0.80313 || val f1: 0.80313 || val precision: 0.80313 || val recall: 0.80313
+[[ 88   3   1   0   0   1   5   2   2   6]
+ [  1  91   1   7   0   3   2   2   1   2]
+ [  0   3 560   4   0   1   6   1   0  26]
+ [  1   9   8 316   0   4   2   1   1   1]
+ [  5   3   1   0  25   2   0   1   0   0]
+ [  4  24   4  16   1 172   4   2   3   6]
+ [  6   0  16   4   0   2 347   2  26  62]
+ [  1   0   4   0   0   0   5  44   6   8]
+ [  4   3   2   1   0   2  30   3 428 107]
+ [  4   6 114   1   0   4  38   6  80 907]]
+
+checkpoint name: r2plus1d_multiclass_22_0.0001 
+train loss: 0.02507 || train accuracy: 0.99194 || train f1: 0.99194 || train precision: 0.99194 || train recall: 0.99194
+[[ 787    0    3    0    0    2    4    0    0    2]
+ [   0  826    0    2    0    4    0    0    3    1]
+ [   2    1 4696    4    0    1    2    0    0   27]
+ [   1    3    6 2789    0    7    0    0    0    1]
+ [   0    0    0    0  342    0    0    0    0    1]
+ [   1    2    1    6    1 1872    0    0    3    4]
+ [   3    0    0    0    0    1 2992    0   14   10]
+ [   0    1    0    0    0    0    1  571    2    3]
+ [   1    0    1    0    0    2   11    1 5239   22]
+ [   2    3   21    2    0    1   10    2   30 9316]]
+val loss: 1.02494 || val accuracy: 0.79989 || val f1: 0.79989 || val precision: 0.79989 || val recall: 0.79989
+[[ 84   6   0   0   0   3   5   2   2   6]
+ [  1  74   1   9   0  11   0   2   1  11]
+ [  2   0 531   2   0   2   5   0   0  59]
+ [  0   1  18 305   1   8   4   0   0   6]
+ [  6   3   0   0  26   1   0   0   0   1]
+ [  5  12   5  11   0 184   4   0   1  14]
+ [  4   0  12   2   0   3 314   4  32  94]
+ [  1   0   1   0   0   0   4  40   6  16]
+ [  2   4   1   0   0   1  27   2 421 122]
+ [  1   4  68   0   0   5  34   6  55 987]]
+
+checkpoint name: r2plus1d_multiclass_23_0.0001 
+train loss: 0.02857 || train accuracy: 0.9909 || train f1: 0.9909 || train precision: 0.9909 || train recall: 0.9909
+[[ 786    2    0    0    3    2    0    0    3    2]
+ [   2  827    0    3    1    1    0    0    1    1]
+ [   1    1 4698    1    0    3    2    0    0   27]
+ [   0    3    3 2792    0    3    1    1    1    3]
+ [   3    2    0    0  336    1    0    0    0    1]
+ [   3    3    3    6    1 1872    0    0    1    1]
+ [   0    1    1    1    0    1 2991    1    7   17]
+ [   0    1    1    1    0    0    1  568    1    5]
+ [   0    2    2    0    0    1    6    2 5228   36]
+ [   1    0   23    6    1    2   16    5   32 9301]]
+val loss: 0.96314 || val accuracy: 0.79558 || val f1: 0.79558 || val precision: 0.79558 || val recall: 0.79558
+[[ 94   3   0   0   0   1   4   0   2   4]
+ [  9  74   1   4   0  13   1   2   1   5]
+ [  4   3 513   5   0   3   6   0   1  66]
+ [  2   7  10 309   0   8   2   2   0   3]
+ [  6   1   0   0  30   0   0   0   0   0]
+ [ 11   5   5  10   3 193   7   1   0   1]
+ [ 15   0   8   2   0   4 328   3  44  61]
+ [  2   0   1   0   0   0   7  44   4  10]
+ [  4   3   3   1   0   3  21   2 468  75]
+ [ 12   2  61   0   0   8  46   5 129 897]]
+
+checkpoint name: r2plus1d_multiclass_24_0.0001 
+train loss: 0.02223 || train accuracy: 0.99208 || train f1: 0.99208 || train precision: 0.99208 || train recall: 0.99208
+[[ 789    1    0    0    2    1    2    0    1    2]
+ [   0  823    1    4    2    3    1    1    0    1]
+ [   0    1 4699    6    0    2    2    0    0   23]
+ [   0    1    4 2793    0    3    1    1    0    4]
+ [   3    2    0    0  335    3    0    0    0    0]
+ [   2    4    1    2    1 1875    1    0    2    2]
+ [   1    0    2    1    0    2 3000    1    6    7]
+ [   0    1    2    0    0    1    2  570    0    2]
+ [   0    1    0    0    0    2    5    3 5235   31]
+ [   2    1   18    2    0    2    7    4   36 9315]]
+val loss: 1.08296 || val accuracy: 0.79126 || val f1: 0.79126 || val precision: 0.79126 || val recall: 0.79126
+[[ 85   3   3   0   1   3   3   0   1   9]
+ [  0  79   1   3   0   9   2   1   5  10]
+ [  0   0 541   2   0   1   1   0   0  56]
+ [  0  15  28 278   0   9   4   0   0   9]
+ [  5   0   2   0  30   0   0   0   0   0]
+ [  2  13  10   7   1 181   4   2   2  14]
+ [  6   0  20   2   0   3 297   2  44  91]
+ [  0   0   5   0   0   1   3  31   9  19]
+ [  2   3   1   0   1   2  17   2 426 126]
+ [  5   0  72   0   0   6  20   3  68 986]]
+
+checkpoint name: r2plus1d_multiclass_25_0.0001 
+train loss: 0.02413 || train accuracy: 0.99248 || train f1: 0.99248 || train precision: 0.99248 || train recall: 0.99248
+[[ 787    2    1    0    1    3    1    0    0    3]
+ [   1  823    0    3    1    4    1    0    1    2]
+ [   1    2 4703    6    0    0    2    0    1   18]
+ [   0    2    6 2793    0    4    0    0    0    2]
+ [   2    0    0    0  338    2    0    0    0    1]
+ [   3    2    0    8    1 1871    0    0    4    1]
+ [   1    0    2    2    0    2 2992    0   11   10]
+ [   0    0    0    0    0    0    0  573    0    5]
+ [   0    1    0    0    0    2   10    0 5238   26]
+ [   2    1   17    2    0    1   12    4   20 9328]]
+val loss: 0.93628 || val accuracy: 0.81068 || val f1: 0.81068 || val precision: 0.81068 || val recall: 0.81068
+[[ 85   4   0   0  10   1   2   0   1   5]
+ [  0  86   0   6   2  11   0   0   2   3]
+ [  4   1 521   4   0   4   7   1   1  58]
+ [  0   3  10 315   3   7   1   0   1   3]
+ [  0   1   0   0  35   1   0   0   0   0]
+ [  2  14   3  13   2 195   3   0   2   2]
+ [  9   1   7   2   0   5 316   1  39  85]
+ [  1   0   4   0   1   0   2  41   5  14]
+ [  2   5   0   1   1   0  10   1 457 103]
+ [  6   3  51   0   0   8  35   5  97 955]]
+
+checkpoint name: r2plus1d_multiclass_26_0.0001 
+train loss: 0.02215 || train accuracy: 0.99238 || train f1: 0.99238 || train precision: 0.99238 || train recall: 0.99238
+[[ 790    0    0    0    1    0    3    1    1    2]
+ [   0  821    1    5    0    4    1    0    3    1]
+ [   0    1 4697    3    0    1    2    0    0   29]
+ [   0    2    3 2793    0    4    2    0    1    2]
+ [   1    0    0    0  341    0    0    0    1    0]
+ [   1    4    2    2    1 1876    0    1    2    1]
+ [   2    0    2    0    0    1 2990    3    8   14]
+ [   1    1    1    0    0    0    2  570    0    3]
+ [   2    1    0    1    0    2   15    0 5237   19]
+ [   2    1   21    2    0    2   11    1   19 9328]]
+val loss: 1.01752 || val accuracy: 0.8034 || val f1: 0.8034 || val precision: 0.8034 || val recall: 0.8034
+[[ 82   2   0   0  13   1   2   0   1   7]
+ [  0  84   1   5   2   8   1   3   0   6]
+ [  2   1 533   9   0   1   4   0   0  51]
+ [  0   7   9 315   1   6   1   0   0   4]
+ [  1   1   0   0  35   0   0   0   0   0]
+ [  2  11   3   9   5 195   3   2   2   4]
+ [ 13   4  13   4   0   3 325   3  20  80]
+ [  2   1   2   0   0   0   3  47   4   9]
+ [  2   6   0   0   2   1  29   1 427 112]
+ [  5   1  75   0   2   9  41   9  82 936]]
+
+checkpoint name: r2plus1d_multiclass_27_0.0001 
+train loss: 0.02356 || train accuracy: 0.99238 || train f1: 0.99238 || train precision: 0.99238 || train recall: 0.99238
+[[ 790    0    3    0    0    2    1    0    0    2]
+ [   0  823    0    3    2    4    0    1    2    1]
+ [   1    1 4711    4    0    1    1    0    0   14]
+ [   0    3    4 2790    0    3    1    1    0    5]
+ [   0    2    0    0  340    1    0    0    0    0]
+ [   2    2    2    4    0 1874    0    1    2    3]
+ [   1    0    0    1    0    0 2993    0   10   15]
+ [   0    1    0    1    0    0    1  570    2    3]
+ [   0    1    0    0    0    2   12    1 5237   24]
+ [   1    0   20    4    1    3   13    3   27 9315]]
+val loss: 1.03932 || val accuracy: 0.79827 || val f1: 0.79827 || val precision: 0.79827 || val recall: 0.79827
+[[ 76   3   2   0   0   1   6   0   4  16]
+ [  0  73   1  11   0  15   1   2   5   2]
+ [  2   0 544   6   0   2   2   0   2  43]
+ [  0   1  10 320   0   6   1   0   0   5]
+ [  3   1   0   0  30   0   0   0   2   1]
+ [  4   7   5  11   1 191   1   1   5  10]
+ [  4   2  13   3   0   5 282   2  60  94]
+ [  0   1   2   0   0   2   2  41   8  12]
+ [  2   2   3   0   0   0   8   1 488  76]
+ [  2   0  79   0   0   6  25   4 129 915]]
+
+checkpoint name: r2plus1d_multiclass_28_0.0001 
+train loss: 0.02076 || train accuracy: 0.99306 || train f1: 0.99306 || train precision: 0.99306 || train recall: 0.99306
+[[ 787    0    1    0    1    1    2    0    3    3]
+ [   1  828    3    0    1    0    0    2    0    1]
+ [   0    0 4718    4    0    0    2    1    0    8]
+ [   0    0    5 2796    0    3    1    0    0    2]
+ [   0    1    0    0  339    2    0    0    0    1]
+ [   0    1    1    3    1 1878    2    1    1    2]
+ [   2    1    0    0    0    2 2996    1    5   13]
+ [   0    0    1    0    0    3    1  565    3    5]
+ [   1    1    0    0    0    0    9    2 5233   31]
+ [   2    0    7    4    1    2   17    4   27 9323]]
+val loss: 1.00998 || val accuracy: 0.81122 || val f1: 0.81122 || val precision: 0.81122 || val recall: 0.81122
+[[  87    6    1    0    0    3    3    0    2    6]
+ [   0   86    0    8    1    9    3    0    2    1]
+ [   2    3  511    4    0    4    6    0    0   71]
+ [   0   12    6  306    0   10    4    0    0    5]
+ [   3    3    0    0   29    2    0    0    0    0]
+ [   1   16    3    7    0  197    5    0    1    6]
+ [  10    0    8    2    0    2  328    0   27   88]
+ [   0    1    1    0    0    0    7   33   10   16]
+ [   2    3    1    0    1    2   20    1  423  127]
+ [   3    3   43    1    0    5   35    3   59 1008]]
+
+checkpoint name: r2plus1d_multiclass_29_0.0001 
+train loss: 0.02071 || train accuracy: 0.99387 || train f1: 0.99387 || train precision: 0.99387 || train recall: 0.99387
+[[ 791    0    1    0    1    1    2    0    0    2]
+ [   2  826    1    2    0    1    0    0    1    3]
+ [   0    0 4713    2    0    2    0    0    0   16]
+ [   0    1    0 2801    0    3    0    0    0    2]
+ [   2    0    0    0  339    1    0    0    0    1]
+ [   1    1    1    2    0 1877    0    0    4    4]
+ [   2    0    3    0    0    1 2987    0   12   15]
+ [   0    0    2    0    0    1    1  570    1    3]
+ [   0    0    0    1    0    1    9    0 5251   15]
+ [   2    2   13    0    0    3   11    4   20 9332]]
+val loss: 1.03884 || val accuracy: 0.80367 || val f1: 0.80367 || val precision: 0.80367 || val recall: 0.80367
+[[ 84   3   3   0   1   0   5   1   1  10]
+ [  2  79   0   6   3   7   2   3   2   6]
+ [  0   1 523   4   1   0   6   1   0  65]
+ [  1   5   8 318   0   1   4   0   1   5]
+ [  5   0   0   1  30   0   0   0   0   1]
+ [  3  13   7  15   4 165   7   6   2  14]
+ [  4   2  10   6   0   2 320   4  29  88]
+ [  1   0   2   0   0   0   5  44   3  13]
+ [  2   2   1   0   2   1  20   5 430 117]
+ [  3   0  59   0   0   5  30   9  67 987]]
+
+checkpoint name: r2plus1d_multiclass_30_0.0001 
+train loss: 0.0193 || train accuracy: 0.99373 || train f1: 0.99373 || train precision: 0.99373 || train recall: 0.99373
+[[ 794    1    0    0    2    0    0    0    0    1]
+ [   1  822    1    4    1    6    0    0    1    0]
+ [   0    3 4713    6    0    1    3    0    1    6]
+ [   0    2    5 2796    0    1    3    0    0    0]
+ [   1    1    0    0  341    0    0    0    0    0]
+ [   1    5    5    1    0 1873    0    1    3    1]
+ [   0    0    3    1    0    0 2992    3    7   14]
+ [   0    0    0    0    0    1    1  573    1    2]
+ [   0    1    0    0    0    2    7    1 5237   29]
+ [   0    1    3    0    0    1   12    2   26 9342]]
+val loss: 1.07815 || val accuracy: 0.79531 || val f1: 0.79531 || val precision: 0.79531 || val recall: 0.79531
+[[ 83   2   5   0   3   3   5   0   1   6]
+ [  0  59   1  21   5  11   0   0   6   7]
+ [  0   0 531   9   0   0   5   1   0  55]
+ [  1   0   8 322   0   5   3   0   1   3]
+ [  1   1   0   2  32   1   0   0   0   0]
+ [  2   1   6  21   1 189   3   0   4   9]
+ [  5   1  14   5   1   4 306   0  45  84]
+ [  1   0   4   0   0   0   6  24  19  14]
+ [  2   2   2   4   1   1   9   1 462  96]
+ [  2   0  83   3   0   5  31   2  93 941]]

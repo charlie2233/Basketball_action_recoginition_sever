@@ -10,21 +10,21 @@ from torchvision import transforms
 class BasketballDataset(Dataset):
     """SpaceJam: a Dataset for Basketball Action Recognition."""
 
-    def __init__(self, annotation_dict, augmented_dict, video_dir="dataset/examples/", augmented_dir="dataset/augmented-examples/", augment=True, transform=None, poseData=False):
+    def __init__(self, annotation_dict, augmented_dict=None, video_dir="dataset/examples/", augmented_dir="dataset/augmented-examples/", augment=True, transform=None, poseData=False):
         with open(annotation_dict) as f:
             self.video_list = list(json.load(f).items())
 
-        if augment == True:
-            self.augment = augment
-            with open(augmented_dict) as f:
-                augmented_list = list(json.load(f).items())
-            self.augmented_dir = augmented_dir
-            # extend with augmented data
-            self.video_list.extend(augmented_list)
-
         self.video_dir = video_dir
+        self.augmented_dir = augmented_dir
         self.poseData = poseData
         self.transform = transform
+        self.augment = augment
+
+        # optionally append augmented samples when provided
+        if self.augment and augmented_dict:
+            with open(augmented_dict) as f:
+                augmented_list = list(json.load(f).items())
+            self.video_list.extend(augmented_list)
 
     def __len__(self):
         # return length of none-flipped videos in directory

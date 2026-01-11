@@ -1,4 +1,5 @@
 import os
+import re
 import torch
 import matplotlib.pyplot as plt
 
@@ -35,7 +36,7 @@ def save_weights(model, args, epoch, optimizer):
     }
 
     if not os.path.exists(args.model_path):
-        os.mkdir(args.model_path)
+        os.makedirs(args.model_path, exist_ok=True)
 
     model_name = '{}_{}_{}'.format(args.base_model_name, epoch, args.lr)
     torch.save(state, '{}/{}.pt'.format(args.model_path, model_name))
@@ -60,7 +61,35 @@ def load_weights(model, args):
     return model
 
 
-def plot_curves(base_model_name, train_loss, val_loss, train_acc, val_acc, train_f1, val_f1, epochs):
+def _to_scalar(x):
+    if torch.is_tensor(x):
+        x = x.detach().cpu()
+        if x.numel() == 1:
+            return x.item()
+        return x.numpy().tolist()
+    if hasattr(x, "item") and not isinstance(x, (list, tuple)):
+        try:
+            return x.item()
+        except Exception:
+            return x
+    return x
+
+
+def _to_cpu_list(seq):
+    # normalize tensors/ndarrays/lists to plain python list on CPU
+    if torch.is_tensor(seq):
+        seq = seq.detach().cpu().numpy().tolist()
+    elif hasattr(seq, "cpu") and hasattr(seq, "numpy") and not isinstance(seq, (list, tuple)):
+        try:
+            seq = seq.cpu().numpy().tolist()
+        except Exception:
+            pass
+    if isinstance(seq, (list, tuple)):
+        return [_to_scalar(x) for x in seq]
+    return [_to_scalar(seq)]
+
+
+def plot_curves(base_model_name, train_loss, val_loss, train_acc, val_acc, train_f1, val_f1, epochs, output_dir="."):
     """
     Given progression of train/val loss/acc, plots curves
     :param base_model_name: name of base model in training session
@@ -76,25 +105,34 @@ def plot_curves(base_model_name, train_loss, val_loss, train_acc, val_acc, train
 
     plt.figure(figsize=(15, 5))
 
+    # ensure all series are on CPU and plain python lists (avoid CUDA tensors in matplotlib)
+    train_loss = _to_cpu_list(train_loss)
+    val_loss = _to_cpu_list(val_loss)
+    train_acc = _to_cpu_list(train_acc)
+    val_acc = _to_cpu_list(val_acc)
+    train_f1 = _to_cpu_list(train_f1)
+    val_f1 = _to_cpu_list(val_f1)
+    epochs = _to_cpu_list(epochs)
+
     plt.subplot(131)
-    plt.plot(epochs, train_loss, label='train loss')
-    plt.plot(epochs, val_loss, label='val loss')
+    plt.plot(epochs, train_loss, marker='o', label='train loss')
+    plt.plot(epochs, val_loss, marker='o', label='val loss')
     plt.xlabel('epochs')
     plt.ylabel('loss')
     plt.title('Loss curves')
     plt.legend()
 
     plt.subplot(132)
-    plt.plot(epochs, train_acc, label='train accuracy')
-    plt.plot(epochs, val_acc, label='val accuracy')
+    plt.plot(epochs, train_acc, marker='o', label='train accuracy')
+    plt.plot(epochs, val_acc, marker='o', label='val accuracy')
     plt.xlabel('epochs')
     plt.ylabel('accuracy')
     plt.title('Accuracy curves')
     plt.legend()
 
     plt.subplot(133)
-    plt.plot(epochs, train_f1, label='train f1 score')
-    plt.plot(epochs, val_f1, label='val f1 score')
+    plt.plot(epochs, train_f1, marker='o', label='train f1 score')
+    plt.plot(epochs, val_f1, marker='o', label='val f1 score')
     plt.xlabel('epochs')
     plt.ylabel('f1 score')
     plt.title('f1 curves')
@@ -102,8 +140,9 @@ def plot_curves(base_model_name, train_loss, val_loss, train_acc, val_acc, train
 
     plt.suptitle(f'Session: {base_model_name}')
 
-    #plt.savefig('previous_run.png')
-    plt.show()
+    os.makedirs(output_dir, exist_ok=True)
+    plt.savefig(os.path.join(output_dir, "curves.png"), dpi=150, bbox_inches="tight")
+    plt.close("all")
 
 def write_history(
         history_path,
@@ -220,10 +259,12 @@ def read_history(history_path):
                     print("Hyperparameters:")
                     print(line)
 
-                # case for getting checkpoint epoch
-                if 'checkpoint' in line:
-                    print(line)
-                    plot_epoch.append(int(line.split('_')[-2]))
+                # case for getting checkpoint epoch using explicit epoch markers
+                if re.search(r'epoch', line, re.IGNORECASE):
+                    m = re.search(r'(?:epoch)\\s*[:=]?\\s*(\\d+)', line, re.IGNORECASE)
+                    if m:
+                        print(line)
+                        plot_epoch.append(int(m.group(1)))
 
                 # case for getting train data for epoch
                 elif 'train' in line and 'arguments' not in line:
@@ -240,6 +281,8 @@ def read_history(history_path):
                     val_plot_f1.append(float(line.split(' ')[10]))
 
             # plot
+            if not plot_epoch:
+                plot_epoch = list(range(1, len(train_plot_loss) + 1))
             plot_curves(
                 name,
                 train_plot_loss,
