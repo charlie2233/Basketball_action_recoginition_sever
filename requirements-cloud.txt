@@ -1,0 +1,8 @@
+# Minimal runtime deps for ai_server.py (cloud / Docker).
+# Use this instead of full requirements.txt for smaller images.
+# PyTorch CPU; for GPU use torch with CUDA in Dockerfile instead.
+fastapi>=0.95.0
+uvicorn[standard]>=0.21.0
+pydantic>=1.10.0
+torch>=1.7.0
+torchvision>=0.8.0

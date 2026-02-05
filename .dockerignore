@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.ipynb
+.venv/
+.git/
+analysis/
+examples/
+histories/
+dataset/*
+!dataset/labels_dict.json
